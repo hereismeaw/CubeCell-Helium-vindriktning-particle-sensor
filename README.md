@@ -1,4 +1,4 @@
-<p align="center"><h2>MQTT connectivity for the Ikea VINDRIKTNING</h2></p>
+<p align="center"><h2>Helium LoRaWAN connectivity for the Ikea VINDRIKTNING</h2></p>
 
 
 This repository contains an ESP8266 firmware, which adds MQTT to the Ikea VINDRIKTNING PM2.5 air quality sensor.
@@ -18,7 +18,7 @@ Therefore, if the ESP burns out after a while, just add a voltage divider or som
 
 To extend your air quality sensor, you will need
 
-- An ESP8266 with a 5v voltage regulator (e.g. a Wemos D1 Mini)
+- A LoRaWAN-enabled dev board, in this case the Heltec Cubecell htcc-ab01
 - Some short dupont cables
 - A soldering iron
 - A long PH0 Screwdriver (e.g. Wera 118022)
@@ -39,7 +39,7 @@ of accidentally melting some plastic.
 As you can see in this image, you'll need to solder wires to GND, 5V and the Testpoint that is connected to TX of the
 Particle Sensor.
 
-Then just connect these Wires to GND, VIN (5V) and D2 (if you're using a Wemos D1 Mini).
+Then just connect these Wires to GND, VIN (5V) and Pin 2 on the Cubecell
 
 Done.
 
@@ -61,47 +61,24 @@ Just build, flash, and you're done.
 
 When connecting everything up, you should see an open Wi-Fi Access Point to configure your Wi-Fi and MQTT credentials.
 
-## Low-Noise Mod
-
-**Note:** The intent of this section is only to document that this is possible. I don't "recommend" doing this nor do I advise against it. 
-
-As you might've noticed, there's a fan in there, which is audible even multiple meters away.
-
-For some reason, the Ikea uC firmware decides to toggle the fan on and off every minute 
-or so causing the noise it makes to change and therefore it constantly stays noticeable.
-
-Good thing is that the Fan does spin up fine with just 3.3V, which means that we can run it constantly from the
-voltage regulator of the D1 Mini.
-
-At 3.3V its noise is barely noticeable from 50 cm away.
-
-![3.3v](./img/3.3v.jpg)
-
-Having the Fan not connected at all was also tried but proved to mess up all readings completely.
-
-
-This is of course a more invasive modification than just adding Wi-Fi data logging.
-Though, given that it is just a €10 device, I'm fine with that.
-
-To make soldering a bit easier, note that the whole outer metal part of the Micro USB connector of the D1 Mini is
-connected to GND.
-
 ## Misc
 
 The VINDRIKTNING consists of a custom(?) Cubic PM1006-like Sensor + another uC that does all that LED stuff, which talk
 via UART. The uC simply regularly polls the sensor and displays the results.
 
-Therefore, to add Wi-Fi connectivity, we just need to also listen to the TX of the Sensor and decode those messages.
+Therefore, to add LoRaWAN connectivity, we just need to also listen to the TX of the Sensor and decode those messages.
 The Ikea uC will do all that polling stuff for us.
 
 As reported in #16, the transitions from Green to Yellow and Yellow to Red in the Ikea firmware are at around 30 and 100μg/m³.
 
 ## ToDo
 
-Reconfiguration of a provisioned device without having to OTAU a firmware that clears the settings would be nice.
+- [ ] Downlink config
+- [ ] Docs
 
 
 ## References and sources
 
+- [Source Repo](https://github.com/Hypfer/esp8266-vindriktning-particle-sensor)
 - [@haxfleisch](https://twitter.com/haxfleisch) for their teardown of the device.
 - [Gabriel Valky](https://github.com/gabonator) for the incredibly useful [LA104 custom firmware + tools](https://github.com/gabonator/LA104)

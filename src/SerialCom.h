@@ -1,19 +1,16 @@
 #pragma once
 
-#include <SoftwareSerial.h>
-
+#include <softSerial.h>
 #include "Types.h"
 
 namespace SerialCom {
-    constexpr static const uint8_t PIN_UART_RX = 4; // D2 on Wemos D1 Mini
-    constexpr static const uint8_t PIN_UART_TX = 13; // UNUSED
-
-    SoftwareSerial sensorSerial(PIN_UART_RX, PIN_UART_TX);
+    softSerial sensorSerial(GPIO1 /*TX pin*/, GPIO2 /*RX pin*/);
 
     uint8_t serialRxBuf[255];
     uint8_t rxBufIdx = 0;
 
     void setup() {
+        Serial.println("Normal serial init");
         sensorSerial.begin(9600);
     }
 
