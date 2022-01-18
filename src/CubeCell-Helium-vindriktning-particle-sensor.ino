@@ -35,7 +35,7 @@ LoRaMacRegion_t loraWanRegion = ACTIVE_REGION;
 DeviceClass_t  loraWanClass = LORAWAN_CLASS;
 
 /*the application data transmission duty cycle.  value in [ms].*/
-uint32_t appTxDutyCycle = 60000;
+uint32_t appTxDutyCycle = 60000; //1 min
 
 /*OTAA or ABP*/
 bool overTheAirActivation = LORAWAN_NETMODE;
@@ -91,6 +91,33 @@ static void prepareTxFrame( uint8_t port )
     appData[1] = puc[0];
 }
 
+//downlink data handle function example
+void downLinkDataHandle(McpsIndication_t *mcpsIndication) {
+    Serial.printf("+REV DATA:%s,RXSIZE %d,PORT %d\r\n",mcpsIndication->RxSlot?"RXWIN2":"RXWIN1",mcpsIndication->BufferSize,mcpsIndication->Port);
+    
+    switch (mcpsIndication->Port) {
+    case 1:
+        /* Set update interval on port 1 */
+        Serial.println("Setting new update interval.");
+        Serial.print("Hours: ");
+        Serial.println(mcpsIndication->Buffer[0]);
+        Serial.print("Minutes: ");
+        Serial.println(mcpsIndication->Buffer[1]);
+        
+        // Multiply slot 1 by 1 hr, slot 2 by 1 minute.
+        // Values (0-255) submitted in hex. 
+        // Use a tool like https://v2.cryptii.com/decimal/base64. 
+        // e.g. `0 15` -> `AA8=` Representing 15 minute interval.
+        appTxDutyCycle = (3600000 * mcpsIndication->Buffer[0]) + (60000 * mcpsIndication->Buffer[1]);
+        break;
+    case 2:
+        // todo: control LED on port 2
+        // todo: party mode???
+        break;
+    default:
+        break;
+    }
+}
 
 void setup() {
 	boardInitMcu();
@@ -110,6 +137,9 @@ void loop() {
 	switch( deviceState ){
 		case DEVICE_STATE_INIT:
 		{
+#if(LORAWAN_DEVEUI_AUTO)
+			LoRaWAN.generateDeveuiByChipID();
+#endif
 #if(AT_SUPPORT)
 			getDevParam();
 #endif

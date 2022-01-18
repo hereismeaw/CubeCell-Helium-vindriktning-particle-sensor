@@ -34,12 +34,19 @@ The firmware can be built and flashed using the PlatformIO IDE. PRs welcome for 
 
 LoRaWAN network keys will need to be added in the code. All keys are MSB.
 After keys are added; just build, flash, and you're done.
+
+## Downlinks
+LoRaWAN update interval is currently configurable over via LoRaWAN downlink. Set the interval in hours, minutes, or both. Values are submitted in two separate buckets, `[hours]` and `[minutes]`. Values up to 255 are supported in each bucket. Use a tool like https://v2.cryptii.com/decimal/base64 to convert the two values into base64 before submitting them as a downlink in Helium Console. e.g.
+```
+"00 15" converts to "AA8=", representing 0 hrs, 15 min
+```
+
 ## Misc
 The VINDRIKTNING consists of a custom(?) Cubic PM1006-like Sensor + another uC that does all that LED stuff, which talk via UART. 
 Therefore, to add LoRaWAN connectivity, we just need to also listen to the TX of the Sensor and decode those messages.
 The transitions from Green to Yellow and Yellow to Red in the Ikea firmware are at around 30μg/m³ and 100μg/m³.
 ## ToDo
-- [ ] Downlink config
+- [x] Downlink config
 - [ ] Docs
 ## References and sources
 - [Source Repo](https://github.com/Hypfer/esp8266-vindriktning-particle-sensor)
