@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="299" height="111"
+    viewBox="-0.5 -0.5 299 111">
+    <defs>
+        <style>
+            .h1,
+            .h2,
+            .h3,
+            .h4,
+            .h5,
+            .h6 {
+                margin-bottom: .5rem;
+                font-weight: 500;
+                line-height: 1.2
+            }
+
+            .h1 {
+                font-size: 2.5rem
+            }
+
+            .h4 {
+                font-size: 1.5rem
+            }
+
+            .h5 {
+                font-size: 1.25rem
+            }
+
+            .h6 {
+                font-size: 1rem
+            }
+        </style>
+    </defs>
+    <path d="M159 13h7M59 13H47M159 13h5q5 0 5 10v29.5q0 10-10 10h-54q-10 0-10 10V102" fill="none" stroke="#000"
+        stroke-miterlimit="10" pointer-events="stroke" />
+    <switch transform="translate(-.5 -.5)">
+        <foreignObject cell-id="5rP8rZcuOSrPf7-UdkpC-9" style="overflow:visible;text-align:left" pointer-events="none"
+            width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:103px;margin-left:98px">
+                <div style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div
+                        style="display:inline-block;font-size:11px;font-family:Helvetica;color:#000;line-height:1.199999982660467;pointer-events:all;background-color:#fff;white-space:nowrap">
+                        CubeCell Pin 2</div>
+                </div>
+            </div>
+        </foreignObject><svg>
+            <defs>
+                <path id="h4Wkzn6D4LkkTAIp" d="M61.813 108.2h73.374" />
+            </defs><text font-size="11" font-family="Helvetica">
+                <textPath xlink:href="#h4Wkzn6D4LkkTAIp" startOffset="50%" text-anchor="middle">
+                    <tspan xml:space="preserve">CubeCell Pin 2</tspan>
+                </textPath>
+            </text>
+        </svg>
+    </switch>
+    <path d="M59 13h18l4-10 8 20 8-20 8 20 8-20 8 20 8-20 8 20 4-10h18" fill="none" stroke="#000" stroke-miterlimit="10"
+        pointer-events="all" />
+    <switch transform="translate(-.5 -.5)">
+        <foreignObject cell-id="5rP8rZcuOSrPf7-UdkpC-1" style="overflow:visible;text-align:left" pointer-events="none"
+            width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:30px;margin-left:109px">
+                <div style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div
+                        style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:nowrap">
+                        1k Ω</div>
+                </div>
+            </div>
+        </foreignObject><svg>
+            <defs>
+                <path id="p4Wkzn6D4LkkTAIq" d="M96.89 42.6h25.235" />
+            </defs><text font-size="12" font-family="Helvetica">
+                <textPath xlink:href="#p4Wkzn6D4LkkTAIq" startOffset="50%" text-anchor="middle">
+                    <tspan xml:space="preserve">1k Ω</tspan>
+                </textPath>
+            </text>
+        </svg>
+    </switch>
+    <path d="M266 13h5q5 0 5 10v36" fill="none" stroke="#000" stroke-miterlimit="10" pointer-events="stroke" />
+    <path d="M166 13h18l4-10 8 20 8-20 8 20 8-20 8 20 8-20 8 20 4-10h18" fill="none" stroke="#000"
+        stroke-miterlimit="10" pointer-events="all" />
+    <switch transform="translate(-.5 -.5)">
+        <foreignObject cell-id="5rP8rZcuOSrPf7-UdkpC-2" style="overflow:visible;text-align:left" pointer-events="none"
+            width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:30px;margin-left:216px">
+                <div style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div
+                        style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:nowrap">
+                        2k Ω</div>
+                </div>
+            </div>
+        </foreignObject><svg>
+            <defs>
+                <path id="F4Wkzn6D4LkkTAIr" d="M203.89 42.6h25.235" />
+            </defs><text font-size="12" font-family="Helvetica">
+                <textPath xlink:href="#F4Wkzn6D4LkkTAIr" startOffset="50%" text-anchor="middle">
+                    <tspan xml:space="preserve">2k Ω</tspan>
+                </textPath>
+            </text>
+        </svg>
+    </switch>
+    <path d="m253 69 22.5 20L298 69Z" fill="#fff" stroke="#000" stroke-miterlimit="10" pointer-events="all" />
+    <path d="M275.5 59v10" fill="none" stroke="#000" stroke-miterlimit="10" pointer-events="all" />
+    <switch transform="translate(-.5 -.5)">
+        <foreignObject cell-id="5rP8rZcuOSrPf7-UdkpC-3" style="overflow:visible;text-align:left" pointer-events="none"
+            width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:96px;margin-left:276px">
+                <div style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div
+                        style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:nowrap">
+                        Ground</div>
+                </div>
+            </div>
+        </foreignObject><svg>
+            <defs>
+                <path id="14Wkzn6D4LkkTAIs" d="M256.484 108.6h40.032" />
+            </defs><text font-size="12" font-family="Helvetica">
+                <textPath xlink:href="#14Wkzn6D4LkkTAIs" startOffset="50%" text-anchor="middle">
+                    <tspan xml:space="preserve">Ground</tspan>
+                </textPath>
+            </text>
+        </svg>
+    </switch>
+    <path d="M20 13 33.25-.25 46.5 13 33.25 26.25 20 13Z" fill="#fff" stroke="#000" stroke-miterlimit="10"
+        pointer-events="all" />
+    <switch transform="translate(-.5 -.5)">
+        <foreignObject cell-id="5rP8rZcuOSrPf7-UdkpC-4" style="overflow:visible;text-align:left" pointer-events="none"
+            width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:33px;margin-left:33px">
+                <div style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div
+                        style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:nowrap">
+                        Sensor Data</div>
+                </div>
+            </div>
+        </foreignObject><svg>
+            <defs>
+                <path id="94Wkzn6D4LkkTAIt" d="M.156 45.6H66.86" />
+            </defs><text font-size="12" font-family="Helvetica">
+                <textPath xlink:href="#94Wkzn6D4LkkTAIt" startOffset="50%" text-anchor="middle">
+                    <tspan xml:space="preserve">Sensor Data</tspan>
+                </textPath>
+            </text>
+        </svg>
+    </switch>
+    <path d="M159 13h7M59 13H47M159 13h5q5 0 5 10v29.5q0 10-10 10h-54q-10 0-10 10V102" fill="none" stroke="#000"
+        stroke-miterlimit="10" pointer-events="stroke" />
+    <switch transform="translate(-.5 -.5)">
+        <foreignObject cell-id="5rP8rZcuOSrPf7-UdkpC-9" style="overflow:visible;text-align:left" pointer-events="none"
+            width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:103px;margin-left:98px">
+                <div style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div
+                        style="display:inline-block;font-size:11px;font-family:Helvetica;color:#000;line-height:1.199999982660467;pointer-events:all;background-color:#fff;white-space:nowrap">
+                        CubeCell Pin 2</div>
+                </div>
+            </div>
+        </foreignObject><svg>
+            <defs>
+                <path id="T4Wkzn6D4LkkTAIu" d="M61.813 108.2h73.374" />
+            </defs><text font-size="11" font-family="Helvetica">
+                <textPath xlink:href="#T4Wkzn6D4LkkTAIu" startOffset="50%" text-anchor="middle">
+                    <tspan xml:space="preserve">CubeCell Pin 2</tspan>
+                </textPath>
+            </text>
+        </svg>
+    </switch>
+    <path d="M266 13h5q5 0 5 10v36" fill="none" stroke="#000" stroke-miterlimit="10" pointer-events="stroke" />
+</svg>
