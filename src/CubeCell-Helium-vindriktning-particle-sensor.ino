@@ -5,16 +5,8 @@
 
 particleSensorState_t state;
 
-/*
- * set LoraWan_RGB to Active,the RGB active in loraWan
- * RGB red means sending;
- * RGB purple means joined done;
- * RGB blue means RxWindow1;
- * RGB yellow means RxWindow2;
- * RGB green means received done;
- */
-
 /* OTAA para*/
+/* All keys MSB */
 uint8_t devEui[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 uint8_t appEui[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 uint8_t appKey[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
@@ -26,7 +18,7 @@ uint32_t devAddr =  ( uint32_t )0x007e6ae1;
 
 /*LoraWan channelsmask, default channels 0-7*/ 
 // uint16_t userChannelsMask[6]={ 0x00FF,0x0000,0x0000,0x0000,0x0000,0x0000 };
-uint16_t userChannelsMask[6] = { 0xFF00,0x0000,0x0000,0x0000,0x0000,0x0000 };
+uint16_t userChannelsMask[6] = { 0xFF00,0x0000,0x0000,0x0000,0x0000,0x0000 }; //Helium Channel Mask
 
 /*LoraWan region, select in arduino IDE tools*/
 LoRaMacRegion_t loraWanRegion = ACTIVE_REGION;
@@ -35,7 +27,7 @@ LoRaMacRegion_t loraWanRegion = ACTIVE_REGION;
 DeviceClass_t  loraWanClass = LORAWAN_CLASS;
 
 /*the application data transmission duty cycle.  value in [ms].*/
-uint32_t appTxDutyCycle = 60000; //1 min
+uint32_t appTxDutyCycle = 60000; //1 min default. Configurable using Downlink
 
 /*OTAA or ABP*/
 bool overTheAirActivation = LORAWAN_NETMODE;
@@ -91,7 +83,7 @@ static void prepareTxFrame( uint8_t port )
     appData[1] = puc[0];
 }
 
-//downlink data handle function example
+//downlink data handling function
 void downLinkDataHandle(McpsIndication_t *mcpsIndication) {
     Serial.printf("+REV DATA:%s,RXSIZE %d,PORT %d\r\n",mcpsIndication->RxSlot?"RXWIN2":"RXWIN1",mcpsIndication->BufferSize,mcpsIndication->Port);
     
@@ -132,7 +124,6 @@ void setup() {
 
 void loop() {
 	SerialCom::handleUart(state);
-  delay(10);
   
 	switch( deviceState ){
 		case DEVICE_STATE_INIT:

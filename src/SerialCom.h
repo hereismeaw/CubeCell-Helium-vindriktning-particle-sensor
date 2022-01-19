@@ -4,7 +4,7 @@
 #include "Types.h"
 
 namespace SerialCom {
-    softSerial sensorSerial(GPIO1 /*TX pin*/, GPIO2 /*RX pin*/);
+    softSerial sensorSerial(GPIO1 /*TX pin*/, GPIO2 /*RX pin (not used)*/);
 
     uint8_t serialRxBuf[255];
     uint8_t rxBufIdx = 0;
