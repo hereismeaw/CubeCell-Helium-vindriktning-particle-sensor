@@ -27,7 +27,7 @@ LoRaMacRegion_t loraWanRegion = ACTIVE_REGION;
 DeviceClass_t  loraWanClass = LORAWAN_CLASS;
 
 /*the application data transmission duty cycle.  value in [ms].*/
-uint32_t appTxDutyCycle = 60000; //1 min default. Configurable using Downlink
+uint32_t appTxDutyCycle = 1800000; //30 min default. Configurable using Downlink
 
 /*OTAA or ABP*/
 bool overTheAirActivation = LORAWAN_NETMODE;
