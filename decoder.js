@@ -20,7 +20,7 @@ function Decoder(bytes, port) {
       us_aqi_pm25 = "VERY UNHEALTHY";
       break;
     default:
-      us_aqi_pm25 = "HAZARDUS";
+      us_aqi_pm25 = "HAZARDOUS";
       break;
   }
 
