@@ -41,6 +41,10 @@ Done.
 ## Software
 The firmware can be built and flashed with [VS Code](https://code.visualstudio.com) using the PlatformIO plugin. PRs welcome for any Arduino IDE support/testing.
 
+You can follow the guide below to set up the PlatformIO environment and CubeCell board:
+
+https://docs.helium.com/use-the-network/devices/development/heltec/cubecell-dev-board/platformio/
+
 LoRaWAN network keys will need to be added in the code. All keys are MSB.
 After keys are added; just build, flash, and you're done.
 
